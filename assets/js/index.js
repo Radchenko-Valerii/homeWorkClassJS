@@ -1,3 +1,5 @@
+const COFF_PREM = 1.25;
+
 class Worker{
   constructor(name, lastname, days, salaryPerDey, getPremium){
     if(typeof (name && lastname) === 'string'){
@@ -21,8 +23,8 @@ class Worker{
     return `${this.name} ${this.lastname}`
   }
   getSalary(){
-      if(this.getPremium === true){
-      return this.salaryPerDey*this.days*1.25;
+      if(this.getPremium){
+      return this.salaryPerDey*this.days*COFF_PREM;
     }
     return this.days*this.salaryPerDey;
   }
