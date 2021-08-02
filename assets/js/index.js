@@ -21,7 +21,7 @@ class Worker{
     return `${this.name} ${this.lastname}`
   }
   getSalary(){
-      if(getPremium === true){
+      if(this.getPremium === true){
       return this.salaryPerDey*this.days*1.25;
     }
     return this.days*this.salaryPerDey;
