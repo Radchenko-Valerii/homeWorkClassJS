@@ -16,14 +16,14 @@ class Worker{
     }  else {
       throw new TypeError('getPremium data must be boolean')
     }
-    if(getPremium === true){
-      this.salaryPerDey*=1.25;
-    }
   }
   getFullName(){
     return `${this.name} ${this.lastname}`
   }
   getSalary(){
+      if(getPremium === true){
+      return this.salaryPerDey*this.days*1.25;
+    }
     return this.days*this.salaryPerDey;
   }
 }
