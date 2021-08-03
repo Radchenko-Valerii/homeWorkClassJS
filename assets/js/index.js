@@ -12,7 +12,7 @@ class Worker{
 
     if (typeof (days && salaryPerDey)==='number'){
 
-      if(days && salaryPerDey >=0){ 
+      if(days >=0 && salaryPerDey >=0){ 
         this.days = days;
         this.salaryPerDey = salaryPerDey;
       } else {
